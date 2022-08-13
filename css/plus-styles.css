@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #EDF6DA;
+    font-family: 'Rubik', sans-serif;
+}
+
+ul {
+    list-style: none;
+    margin: auto 0;
+}
+
+ul li {
+    cursor: pointer;
+}
+
+/* Configuração da navbar */
+
+#menu {
+    float: left;
+    background-color: #117BA8;
+    height: 100vh;
+    display: flex;
+}
+
+#menu ul li img {
+    margin: 2rem 1.1rem;
+    float: center;
+}
+
+#principal {
+    display: flex;
+}
+
+#atributos {
+    margin: 0 auto;
+    margin-top: 5vh;
+    padding: 3rem;
+}
+
+input {
+    width: 51rem;
+    height: 2.5rem;
+    background-color: #D3EC9E;
+    border-style: none;
+    border-radius: 0.2rem;
+    padding-left: 0.5rem;
+    font-family: 'Rubik', sans-serif;
+    font-size: 0.94rem;
+}
+
+input:focus {
+    background-color: #3d5407;
+    color: white;
+}
+
+textarea {
+    width: 51rem;
+    height: 10vh;
+    background-color: #D3EC9E;
+    border-style: none;
+    border-radius: 0.2rem;
+    padding-left: 0.5rem;
+    padding: 1rem;
+    resize: none;
+    font-family: 'Rubik', sans-serif;
+    font-size: 0.94rem;
+}
+
+textarea:focus {
+    width: 51rem;
+    height: 10vh;
+    background-color: #3d5407;
+    color: white;
+    border-style: none;
+    border-radius: 0.2rem;
+    padding-left: 0.5rem;
+    padding: 1rem;
+    resize: none;
+    font-family: 'Rubik', sans-serif;
+    font-size: 0.94rem;
+}
+
+#atributos div h1 {
+    margin: 2vh 0;
+}
+
+#date-prioridade {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5vh;
+}
+
+#date input {
+    width: 10rem;
+    padding: 0.5rem;
+    margin-top: 1.5vh;
+}
+
+#prioridade input {
+    width: 0.9rem;
+    height: 1.2vh;
+}
+
+#prioridade ul {
+    margin-top: 2vh;
+}
+
+#prioridade ul li {
+    margin-top: 1.2vh;
+}
+
+.button-ok {
+    display: flex;
+    justify-content: center;    
+    margin-top: 5vh;
+}
+
+.button-ok button {
+    padding: 0.8rem;
+    background-color: #4E7006;
+    color: #fff;
+    border-style: none;
+    border-radius: 0.2rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.button-ok button:hover {
+    padding: 0.8rem;
+    background-color: #beff32;
+    color: black;
+    border-style: none;
+    border-radius: 0.2rem;
+    text-transform: uppercase;
+    font-weight: 800;
+}

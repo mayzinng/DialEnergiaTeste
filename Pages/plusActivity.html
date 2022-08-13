@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+
+<head>
+    <meta charset = "UTF-8">
+    <link rel="stylesheet" type="text/css" href="../css/plus-styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap" rel="stylesheet">
+
+</head>
+
+
+
+<body>
+    <nav id="menu">
+        <ul>
+            <li><img src="../icons/plus.svg"></li>
+            <li><img src="../icons/atividades.svg"></li>
+            <li><img src="../icons/calendário.svg"></li>
+        </ul>
+    </nav>
+    <main id="principal">
+        <div id="atributos">
+            <h5 class="error"></h5>
+            <div>
+                <h1>Título</h1>
+                <input type="text" id="title">
+            </div>
+            <div>
+                <h1>Descrição</h1>
+                <!-- <input type="text" placeholder="Descreva seu compromisso"> -->     
+                <textarea placeholder="Descreva seu compromisso.." rows="10" maxlength="800" id="descricao"></textarea>
+            </div>
+            <div id="date-prioridade">
+                <div id="date">
+                    <h3>Data</h3>
+                    <input type="date" min="2022-08-01" id="data">
+                    <input type="time">
+                </div>
+                <div id="prioridade">
+                    <h3>Importância</h3>
+                    <ul>
+                        <li>
+                            <input type="radio" name="prioridade" value="Alta"> Alta
+                        </li>
+                        <li>
+                            <input type="radio" name="prioridade" value="Média"> Média
+                        </li>
+                        <li>
+                            <input type="radio" name="prioridade" value="Baixa"> Baixa
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="button-ok">
+                <button class="button-ok" type="submit">Adicionar</button>
+            </div>
+        </div>
+       
+    </main>
+
+
+</body>
+
+<script src="../js/script-plus-page.js"></script>
+
+
+</html>
