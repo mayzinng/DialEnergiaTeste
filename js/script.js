@@ -84,8 +84,14 @@ function saveAtividades(lembrete) {
        
         const atividadeJSON = JSON.stringify(lembrete);
         localStorage.setItem("le]", atividadeJSON);
-
+        console.log(lembrete)
+        console.log(atividadeJSON)
         console.log('oi')
         
+}
+
+
+function adicionaAsAtividades(lembrete) {
+
 }
 
