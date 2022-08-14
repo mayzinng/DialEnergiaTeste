@@ -24,15 +24,16 @@
     </nav>
     <main id="principal">
         <div id="atributos">
-            <h5 class="error"></h5>
+            <h5 class="error" style="color: rgb(255, 0, 0);"></h5>
+            <h5 class="right" style="color: rgb(10, 124, 0);"></h5>
             <div>
                 <h1>Título</h1>
-                <input type="text" id="title">
+                <input type="text" id="title" minlength="3" maxlength="30">
             </div>
             <div>
                 <h1>Descrição</h1>
                 <!-- <input type="text" placeholder="Descreva seu compromisso"> -->     
-                <textarea placeholder="Descreva seu compromisso.." rows="10" maxlength="800" id="descricao"></textarea>
+                <textarea placeholder="Descreva seu compromisso.." rows="10" minlength="20" maxlength="800" id="descricao"></textarea>
             </div>
             <div id="date-prioridade">
                 <div id="date">
@@ -40,23 +41,9 @@
                     <input type="date" min="2022-08-01" id="data">
                     <input type="time">
                 </div>
-                <div id="prioridade">
-                    <h3>Importância</h3>
-                    <ul>
-                        <li>
-                            <input type="radio" name="prioridade" value="Alta"> Alta
-                        </li>
-                        <li>
-                            <input type="radio" name="prioridade" value="Média"> Média
-                        </li>
-                        <li>
-                            <input type="radio" name="prioridade" value="Baixa"> Baixa
-                        </li>
-                    </ul>
-                </div>
             </div>
             <div class="button-ok">
-                <button class="button-ok" type="submit">Adicionar</button>
+                <button id="button-ok" type="submit">Adicionar</button>
             </div>
         </div>
        
@@ -65,7 +52,8 @@
 
 </body>
 
-<script src="../js/script-plus-page.js"></script>
+<!-- <script src="../js/script-plus-page.js"></script> -->
+<script src="../js/script.js"></script>
 
 
 </html>

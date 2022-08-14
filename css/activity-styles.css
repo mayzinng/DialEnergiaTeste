@@ -88,3 +88,8 @@ input {
     float: right;
     cursor: pointer;
 }
+
+#list-activities div p {
+    background-color: red;
+    display: inline-flex;
+}

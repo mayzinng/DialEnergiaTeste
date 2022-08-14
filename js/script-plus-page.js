@@ -1,9 +1,11 @@
-console.log('oi')
+//imports
+
+
 
 //Pegando valores do título e descrição
 let submit = document.querySelector('.button-ok')
 
-submit.onclick = function() {
+let Values = submit.onclick = function values() {
     let titulo = document.querySelector('#title')
     let tituloValor = titulo.value
 
@@ -29,8 +31,7 @@ submit.onclick = function() {
 
     if(tituloValor || dataValor || horaValor || descricaoValor == '') {
         error.innerText = 'Preencha todos os campos'
-    } else if (dataValor == '') {
-        error.innerText = 'Preencha todos os campos'
     }
  
 }
+

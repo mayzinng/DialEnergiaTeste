@@ -92,7 +92,7 @@ textarea:focus {
 
 #date-prioridade {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     margin-top: 5vh;
 }
 
