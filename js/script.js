@@ -6,10 +6,12 @@ let minutos = dateNow.getMinutes()
 
 
 let submit = document.querySelector('#button-ok')
+console.log(submit)
+
 
 //Pegando valores do título e descrição
 
-submit.onclick = function Values() {
+function Values() {
 
     
     let titulo = document.querySelector('#title')
@@ -31,13 +33,15 @@ submit.onclick = function Values() {
     let Title = tituloValor
     let Hours = horaValor
 
-    const lembrete = {
+    const lembrete = [  { 
         "id": id, 
         "data": Data,
         "descricao": Descricao,
         "titulo": Title,
         "hora": Hours,
-    }
+        }
+    ]
+        
     
 
     //checando os valores
@@ -66,24 +70,35 @@ submit.onclick = function Values() {
 
     let atividadeExistente = localStorage.getItem("lembrete");
     if(atividadeExistente == null || atividadeExistente == '') {
-        const atividades = []
+        let atividades = []
         atividades.push[lembrete]
 
         //SAVE
-        saveAtividades(lembrete);
+        saveAtividades(atividades);
     } else {
+
+        atividades = lembrete.map(function(obj) {
+            return Object.keys(obj).map(function(key) {
+                return obj[key];
+            });
+        });
+        console.log(atividades);
+
         let atividadesRecuperadas = JSON.parse(atividadeExistente);
-        atividadesRecuperadas.push(lembrete)
-        saveAtividades(lembrete);
+        atividades.push(lembrete)
+        saveAtividades(atividadesRecuperadas);
+        console.log(atividadesRecuperadas)
     }
 
-    console.log(lembrete)
+
+    mostraAtividades();
 }
+
 
 function saveAtividades(lembrete) {
        
         const atividadeJSON = JSON.stringify(lembrete);
-        localStorage.setItem("le]", atividadeJSON);
+        const local = localStorage.setItem("lembrete", atividadeJSON);
         console.log(lembrete)
         console.log(atividadeJSON)
         console.log('oi')
@@ -91,7 +106,16 @@ function saveAtividades(lembrete) {
 }
 
 
-function adicionaAsAtividades(lembrete) {
+function mostraAtividades() {
+    let html = ''
 
+    let atividadeExistente = localStorage.getItem("lembrete")
+    
+    let atividadesRecuperadas = JSON.parse(atividadeExistente)
+    for(let i = 0; i < atividadesRecuperadas.length; i++) {
+        html += formataAtividade(atividadesRecuperadas[i])        
+    }
+
+    document.getElementsByClassName('.activity').innerHTML = html
 }
 
